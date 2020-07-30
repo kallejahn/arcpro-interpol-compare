@@ -8,3 +8,8 @@ The Jupyter notebook (“interpol_comp.ipynb”) runs the following interpolatio
 Create a new ArcGIS Pro project. The project folder and geodatabase are where you will put all of the input files described below.
 ### Required input files
 - A **point feature class** (to be interpolated) stored **in the project geodatabase**. Make sure this feature class does not have a field called “RASTERVALU”. Rename that field to something else if necessary.
+- **Three XML files** containing kriging model parameters **stored directly in the project folder** (the folder with the house symbol, see Figure 1), **not in a subfolder** within the project folder. These files are included with the Jupyter Notebook, but can also be created by the user.
+### Optional input files:
+- A snap raster stored in the project geodatabase. This forces all rasters created to share the cell size and orientation of the snap raster.
+- A boundary polygon feature class stored in the project geodatabase. This is used with Topo to Raster.
+

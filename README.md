@@ -17,7 +17,7 @@ Create a new ArcGIS Pro project. The project folder and geodatabase are where yo
 - A **point feature class** (to be interpolated) stored **in the project geodatabase**. **Make sure this feature class does not have a field called “RASTERVALU”.** Rename that field to something else if necessary.
 - **Three XML files** containing kriging model parameters **stored directly in the project folder** (the folder with the house symbol in ArcGIS Catalog), **not in a subfolder** within the project folder. These files are included with the Jupyter Notebook, but can also be created by the user.
 
-<img src="images/fig1.png" alt="home folder" style="zoom:90%;" align="left" />
+<img src="images/fig1.png" alt="home folder" style="zoom:90%;" />
 
 ### Optional input files
 - A **snap raster** stored in the project geodatabase. This forces all rasters created to share the cell size and orientation of the snap raster.
@@ -29,7 +29,7 @@ Creating Geostatistical layers iteratively using the Python Notebook requires st
 
 If you do want to create your own XML files however, it is not difficult to do so. The XML file is created using the Geostatistical Wizard, saved with the specified name in the project folder. To do this, go through the Geostatistical Wizard prompts until you have your desired settings and click the Finish button. In the Method Report window that appears, click the “three dots” menu button in the top right corner and select “Save Model as XML”. Choose the appropriate name for the XML based on the Kriging type (*“KrigingSim.xml”*, *“KrigingOrd.xml”*, and *“KrigingUnv.xml”*).
 
-<img src="images/fig2.png" alt="XML in Wizard" style="zoom:90%;" align="left" />
+<img src="images/fig2.png" alt="XML in Wizard" style="zoom:90%;" />
 
 ## Output Files
 
@@ -59,7 +59,7 @@ Jupyter notebooks are made up of a series of “cells” that contain code. The 
 
 `ebkRadius`: The Search Neighborhood radius for EBK is calculated by an algorithm within the Geostatistical Wizard. You will need to click through the EBK section of the Wizard until you reach the “General Properties” menu shown below.
 
-<img src="images/fig5.png" alt="EBK radius" style="zoom:100%;" align="left" />
+<img src="images/fig5.png" alt="EBK radius" style="zoom:100%;"  />
 
 `maxLocalPoints`: The number of data points used in the local variograms created during Empirical Bayesian Kriging. If you get Error 040206 (see list of common errors below), increase this number. A larger max will take much longer to run, so try to avoid increasing too much.
 
@@ -71,7 +71,7 @@ Jupyter notebooks are made up of a series of “cells” that contain code. The 
 
 Once you have enetered the input variables, run the notebook by clicking on the Cell dropdown menu in the Notebook toolbar, and selecting Run All.
 
-<img src="images/fig6.png" alt="Run All in notebook" style="zoom:90%;" align="left" />
+<img src="images/fig6.png" alt="Run All in notebook" style="zoom:90%;" />
 
 This will execute the whole notebook. As it runs, the notebook in inform you which of the interpolation methods it is working on at the bottom of the notebook. Many of the methods are computationally intensive and may take some time on a personal computer. When the notebook is done, you will have many geostatistical layers and rasters saved to the project folder and geodatabase. You will also have an Excel file saved in the project folder that contains the cross-validation statistics and the training/testing statistics.
 
